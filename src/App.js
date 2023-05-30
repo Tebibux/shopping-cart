@@ -1,7 +1,7 @@
 
 const App = () => {
   return (
-    null
+    <h1>It took to long!</h1>
   );
 }
 
