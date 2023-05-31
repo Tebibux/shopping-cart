@@ -1,16 +1,14 @@
 import React from 'react';
 import './css/style.css';
-
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
 const App = () => {
   return (
     <div className="App">
-      <header className="header">Header</header>
-      <div className="container">
-        <div className="sidebar-left">Left Sidebar</div>
-        <main className="content">Main Content</main>
-        <div className="sidebar-right">Right Sidebar</div>
-      </div>
-      <footer className="footer">Footer</footer>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 };
