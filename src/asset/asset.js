@@ -1,16 +1,39 @@
-import img1 from './img/AIEYEZO.jpg';
-import img2 from './img/caucosian.jpg';
-import img3 from './img/EYLRIM.jpg';
-import img4 from './img/Teumire.jpg';
-import img5 from './img/OCCI CHIARI.jpg';
-import img6 from './img/Laemzinv.jpg';
-import img7 from './img/COASION Classic.jpg';
-import img8 from './img/VISOONE .jpg';
-import img9 from './img/IBOANN.jpg';
-import img10 from './img/Lbsidiety.jpg';
+// importing the glass image
+import img1 from './img/glass/AIEYEZO.jpg';
+import img2 from './img/glass/caucosian.jpg';
+import img3 from './img/glass/EYLRIM.jpg';
+import img4 from './img/glass/Teumire.jpg';
+import img5 from './img/glass/OCCI CHIARI.jpg';
+import img6 from './img/glass/Laemzinv.jpg';
+import img7 from './img/glass/COASION Classic.jpg';
+import img8 from './img/glass/VISOONE .jpg';
+import img9 from './img/glass/IBOANN.jpg';
+import img10 from './img/glass/Lbsidiety.jpg';
 
+// importing the shoe image
+import shoeImg1 from './img/shoe/ShoeImage 1.jpg';
+import shoeImg2 from './img/shoe/ShoeImage 2.jpg';
+import shoeImg3 from './img/shoe/ShoeImage 3.jpg';
+import shoeImg4 from './img/shoe/ShoeImage 4.jpg';
+import shoeImg5 from './img/shoe/ShoeImage 5.jpg';
+import shoeImg6 from './img/shoe/ShoeImage 6.jpg';
+import shoeImg7 from './img/shoe/ShoeImage 7.jpg';
+import shoeImg8 from './img/shoe/ShoeImage 8.jpg';
+import shoeImg9 from './img/shoe/ShoeImage 9.jpg';
+import shoeImg10 from './img/shoe/ShoeImage 10.jpg';
 
+// importing computer image
 
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg2 from './img/computer/computer 2.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg1 from './img/computer/computer 1.jpg';
 const assetObject = {
 	glass: {
 	  asset1: {
