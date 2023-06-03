@@ -26,14 +26,40 @@ import shoeImg10 from './img/shoe/ShoeImage 10.jpg';
 
 import computerImg1 from './img/computer/computer 1.jpg';
 import computerImg2 from './img/computer/computer 2.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
-import computerImg1 from './img/computer/computer 1.jpg';
+import computerImg3 from './img/computer/computer 3.jpg';
+import computerImg4 from './img/computer/computer 4.jpg';
+import computerImg5 from './img/computer/computer 5.jpg';
+import computerImg6 from './img/computer/computer 6.jpg';
+import computerImg7 from './img/computer/computer 7.jpg';
+import computerImg8 from './img/computer/computer 8.jpg';
+import computerImg9 from './img/computer/computer 9.jpg';
+import computerImg10 from './img/computer/computer 10.jpg';
+
+// importing clothes image
+
+import clothesImg1 from './img/clothes/clothes 1.jpg';
+import clothesImg2 from './img/clothes/clothes 2.jpg';
+import clothesImg3 from './img/clothes/clothes 3.jpg';
+import clothesImg4 from './img/clothes/clothes 4.jpg';
+import clothesImg5 from './img/clothes/clothes 5.jpg';
+import clothesImg6 from './img/clothes/clothes 6.jpg';
+import clothesImg7 from './img/clothes/clothes 7.jpg';
+import clothesImg8 from './img/clothes/clothes 8.jpg';
+import clothesImg9 from './img/clothes/clothes 9.jpg';
+import clothesImg10 from './img/clothes/clothes 10.jpg';
+
+// importing electronics image
+
+import electronicsImg1 from './img/electronics/electronics1.jpg';
+import electronicsImg2 from './img/electronics/electronics2.jpg';
+import electronicsImg3 from './img/electronics/electronics3.jpg';
+import electronicsImg4 from './img/electronics/electronics4.jpg';
+import electronicsImg5 from './img/electronics/electronics5.jpg';
+import electronicsImg6 from './img/electronics/electronics6.jpg';
+import electronicsImg7 from './img/electronics/electronics7.jpg';
+import electronicsImg8 from './img/electronics/electronics8.jpg';
+import electronicsImg9 from './img/electronics/electronics9.jpg';
+import electronicsImg10 from './img/electronics/electronics10.jpg';
 const assetObject = {
 	glass: {
 	  asset1: {
