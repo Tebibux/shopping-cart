@@ -13,7 +13,7 @@ const Catagories = () => {
 				{items.map(item => {
 					return (
 						<li className="item-title" key={uuid4()}>
-							{item.toUpperCase()}
+							{item.toLocaleUpperCase()}
 						</li>
 					)
 				}

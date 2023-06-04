@@ -83,7 +83,6 @@ body {
 }
 
 .sidebar-left {
-	background-color: rgba(238, 231, 231, 0.43);
 	padding: 10px;
 }
 
@@ -95,10 +94,13 @@ body {
 	gap: 30px;
 
 }
-.catagories{
+ul,
+.catagories {
 	width: inherit;
-
+	padding-left: 0;
+	list-style-type: none;
 }
+li,
 .catagories-title {
 	padding-left: 10px;
 	width: inherit;
@@ -116,11 +118,14 @@ body {
 	font-size: 1.2rem;
 	padding: 10px 20px 10px 10px;
 	margin: 10px 0;
+	text-align: left;
 }
 
 .item-title:hover {
 	width: inherit;
-	background: linear-gradient(to top, transparent, rgba(163, 157, 157, 0.396));
+	background: linear-gradient(to top,
+			transparent,
+			rgba(163, 157, 157, 0.235));
 	color: rgb(0, 3, 80);
 	border-radius: 10px;
 	transition: all 0.5s ease-in-out;
@@ -132,7 +137,6 @@ body {
 }
 
 .sidebar-right {
-	background-color: rgba(238, 231, 231, 0.43);
 	padding: 20px;
 }
 

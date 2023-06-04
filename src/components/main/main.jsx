@@ -1,5 +1,6 @@
 import React from "react";
 import Catagories from "./childComponent/Catagories";
+import Items from "./childComponent/Items";
 
 const Main = () => {
 	return (
@@ -7,7 +8,9 @@ const Main = () => {
         <div className="sidebar-left">
           <Catagories />
         </div>
-        <main className="content">Main Content</main>
+        <main className="content">
+          <Items />
+          </main>
         <div className="sidebar-right">Right Sidebar</div>
       </div>
 	)
