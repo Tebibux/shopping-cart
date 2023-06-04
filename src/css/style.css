@@ -28,8 +28,51 @@ body {
 
 .header {
 	height: 100%;
-	background-color: lightblue;
+	background: linear-gradient(to top, transparent, rgba(207, 232, 240, 0.726));
+	padding: 0 10%;
 
+}
+
+.header-container {
+	height: inherit;
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	place-items: center;
+}
+
+.logo-text {
+	font-weight: bolder;
+	font-size: 3.5rem;
+}
+
+.navbar {
+	display: inherit;
+	place-items: center;
+	height: inherit;
+	font-weight: bolder;
+	font-size: 1.5rem;
+}
+
+.nav-links {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-link {
+	margin: 10px;
+	padding: 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+.nav-link:hover {
+	border-radius: 6px;
+	background-color: #202020;
+	color: white;
+	transition: all 0.3s ease-in;
 }
 
 .container {

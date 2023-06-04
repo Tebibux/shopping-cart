@@ -1,7 +1,11 @@
 import React from 'react'
-
+import HeaderNavigation from './navLink';
 const Header = () => {
-	return <div className="header">Header</div>
+	return (
+		<div className="header">
+			<HeaderNavigation />
+		</div>
+	)
 }
 
 export default Header;
