@@ -38,13 +38,23 @@ const Items = () => {
 					return (
 						<>
 							<div className="display-item-box" key={uuid4()}>
-								<img src={productImg} alt={productDisc} />
-								<p>
-									{productDisc}
-								</p>
-								<p>
-									{productPrice}
-								</p>
+								<div className="product-item-image">
+									<img src={productImg} alt={productDisc} />
+								</div>
+								<div className="product-item-disc">
+									<p className="product-item-description">
+										{productDisc}
+									</p>
+									<p className="product-item-price">
+										<span className="dollar">$</span>
+										<span className="number">
+											{productPrice}
+											<span className="nine-number">.99</span>
+										</span>
+
+									</p>
+								</div>
+
 							</div>
 						</>
 					)
