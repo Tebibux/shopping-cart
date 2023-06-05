@@ -3,27 +3,18 @@ import assets from '../../../asset/asset';
 import uuid4 from "uuid4";
 
 
-const Items = () => {
+
+
+
+const Items = ({ ObjectKeys, assetName}) => {
 	// map through the items 
 	// extract item and in each item randomize from the ten item
-	// choose one item and display the choose one
-	const ObjectKeys = Object.keys(assets);
-	const assetNameHolder = () => {
-		const assetArray = [];
-		const assetName = 'asset';
-		for (let i = 1; i < 11; i++) {
-			if (assetArray.includes(`${assetName}${i}`)) {
-				return;
-			} else {
-				assetArray.push(`${assetName}${i}`);
-			}
-		}
-		return assetArray;
-	};
-	// an array that holds the array with the number
-	const assetName = assetNameHolder();
+	// choose one item and display the choose one	
 
-
+	const handleClickItem = (ObjectKey) => {
+		console.log(assets[ObjectKey]);
+		return assets[ObjectKey];
+	}
 	return (
 
 		<div className="display-item">
@@ -37,7 +28,10 @@ const Items = () => {
 
 					return (
 						<>
-							<div className="display-item-box" key={uuid4()}>
+							<div className="display-item-box"
+								key={uuid4()}
+								onClick={() => handleClickItem(ObjectKey)}
+							>
 								<div className="product-item-image">
 									<img src={productImg} alt={productDisc} />
 								</div>
