@@ -4,14 +4,10 @@ import uuid4 from "uuid4";
 
 
 const Items = () => {
-	const assetObject = assets;
 	// map through the items 
 	// extract item and in each item randomize from the ten item
 	// choose one item and display the choose one
-	// const itemsAsset = Object.key(itemsKey);
-	// console.log(itemsKey.map(item => Object.entries(item)));
-	// console.log(assetObject.clothes.asset1.productDisc)
-	const ObjectKeys = Object.keys(assetObject);
+	const ObjectKeys = Object.keys(assets);
 	const assetNameHolder = () => {
 		const assetArray = [];
 		const assetName = 'asset';
@@ -29,14 +25,27 @@ const Items = () => {
 
 
 	return (
-		
+
 		<div className="display-item">
 			{
 				ObjectKeys.map(ObjectKey => {
 					// console.log(assetPosition)
+					const product = assets[ObjectKey][assetName[Math.floor(Math.random() * 6)]];
+					const productImg = product.image;
+					const productDisc = product.productDisc;
+					const productPrice = product.productPrice;
+
 					return (
 						<>
-							<li key={uuid4()}>{assetObject[ObjectKey][assetName[Math.floor(Math.random() * 6)]].productDisc}</li>
+							<div className="display-item-box" key={uuid4()}>
+								<img src={productImg} alt={productDisc} />
+								<p>
+									{productDisc}
+								</p>
+								<p>
+									{productPrice}
+								</p>
+							</div>
 						</>
 					)
 				})

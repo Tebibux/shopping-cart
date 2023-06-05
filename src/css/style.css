@@ -94,12 +94,14 @@ body {
 	gap: 30px;
 
 }
+
 ul,
 .catagories {
 	width: inherit;
 	padding-left: 0;
 	list-style-type: none;
 }
+
 li,
 .catagories-title {
 	padding-left: 10px;
@@ -132,10 +134,18 @@ li,
 }
 
 .content {
-	background-color: white;
-	padding: 20px;
+	background-color: rgb(255, 255, 255);
+	padding: 10px;
 }
 
+.display-item {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.display-item-box{
+	background: lightblue;	
+}
 .sidebar-right {
 	padding: 20px;
 }
