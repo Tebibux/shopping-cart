@@ -4,9 +4,7 @@ import Items from "./childComponent/Items";
 import SelectedCatagory from "./childComponent/SelectedCatagory";
 import assets from '../../asset/asset';
 
-
-
-// an array that holds the array with the number
+// Function to generate an array with asset names
 export const assetNameHolder = () => {
   const assetArray = [];
   const assetName = 'asset';
@@ -19,18 +17,13 @@ export const assetNameHolder = () => {
   return assetArray;
 };
 
-
-
 const Main = () => {
-  const [selectedItem, setSelectedItem] = useState('');
+  const [selectedCatagories, setSelectedCatagories] = useState([]);
   const ObjectKeys = Object.keys(assets);
 
-
   const handleClickItem = (ObjectKey) => {
-    return setSelectedItem(assets[ObjectKey]);
+    setSelectedCatagories(assets[ObjectKey]);
   }
-
-
 
   return (
     <div className="container">
@@ -38,18 +31,20 @@ const Main = () => {
         <Catagories />
       </div>
       <main className="content">
-        {selectedItem === '' ? (
+        {selectedCatagories.length === 0 ? (
           <Items
             ObjectKeys={ObjectKeys}
             assetName={assetNameHolder()}
             handleClickItem={handleClickItem}
           />
-        ) :
-          <SelectedCatagory selectedItem={selectedItem} />
-        }
+        ) : (
+          <SelectedCatagory
+            selectedCatagories={selectedCatagories}
+            assetName={assetNameHolder()}
+          />
+        )}
       </main>
-      <div className="sidebar-right">
-      </div>
+      <div className="sidebar-right"></div>
     </div>
   )
 }
