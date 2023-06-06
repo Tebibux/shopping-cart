@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Catagories from "./childComponent/Catagories";
 import Items from "./childComponent/Items";
-import Cart from "./childComponent/cart";
+import SelectedCatagory from "./childComponent/SelectedCatagory";
 import assets from '../../asset/asset';
 
 
@@ -38,14 +38,17 @@ const Main = () => {
         <Catagories />
       </div>
       <main className="content">
-        <Items
-          ObjectKeys={ObjectKeys}
-          assetName={assetNameHolder()}
-          handleClickItem={handleClickItem}
-        />
+        {selectedItem === '' ? (
+          <Items
+            ObjectKeys={ObjectKeys}
+            assetName={assetNameHolder()}
+            handleClickItem={handleClickItem}
+          />
+        ) :
+          <SelectedCatagory selectedItem={selectedItem} />
+        }
       </main>
       <div className="sidebar-right">
-        <Cart selectedItem={selectedItem} />
       </div>
     </div>
   )
