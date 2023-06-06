@@ -1,18 +1,12 @@
 import React from "react";
+import assetObject from "../../../asset/asset";
 
-const SelectedCatagory = ({ selectedCatagories, assetName }) => {
-	const catagoryElementsKeyArray = Object.keys(selectedCatagories);
-	const catagoryElementArray = Object.entries(selectedCatagories);
-
-
-	const catagoryToBeChecked = catagoryElementArray.map((catagoryElement, index=0) => {
-		
-	})
-
-		console.log(catagoryElementArray);
-
-	//   const catagoryArray = selectedCatagories.map()
-
+const SelectedCatagory = ({
+	ObjectKeys,
+	assetName,
+	handleClickItem,
+	SelectedCatagory }) => {
+	console.log(SelectedCatagory);
 	return <h2>Hi, there is no bug found</h2>;
 };
 
