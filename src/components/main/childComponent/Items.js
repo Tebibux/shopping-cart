@@ -6,15 +6,10 @@ import uuid4 from "uuid4";
 
 
 
-const Items = ({ ObjectKeys, assetName}) => {
+const Items = ({ ObjectKeys, assetName, handleClickItem}) => {
 	// map through the items 
 	// extract item and in each item randomize from the ten item
 	// choose one item and display the choose one	
-
-	const handleClickItem = (ObjectKey) => {
-		console.log(assets[ObjectKey]);
-		return assets[ObjectKey];
-	}
 	return (
 
 		<div className="display-item">

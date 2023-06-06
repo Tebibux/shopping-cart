@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Catagories from "./childComponent/Catagories";
 import Items from "./childComponent/Items";
 import Cart from "./childComponent/cart";
@@ -22,8 +22,13 @@ export const assetNameHolder = () => {
 
 
 const Main = () => {
+  const [selectedItem, setSelectedItem] = useState('');
   const ObjectKeys = Object.keys(assets);
 
+
+  const handleClickItem = (ObjectKey) => {
+    return setSelectedItem(assets[ObjectKey]);
+  }
 
 
 
@@ -33,13 +38,14 @@ const Main = () => {
         <Catagories />
       </div>
       <main className="content">
-        <Items 
+        <Items
           ObjectKeys={ObjectKeys}
           assetName={assetNameHolder()}
-          />
+          handleClickItem={handleClickItem}
+        />
       </main>
       <div className="sidebar-right">
-        <Cart />
+        <Cart selectedItem={selectedItem} />
       </div>
     </div>
   )
