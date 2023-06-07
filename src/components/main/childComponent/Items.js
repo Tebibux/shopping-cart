@@ -15,15 +15,13 @@ const Items = ({ ObjectKeys, assetName, handleClickItem}) => {
 		<div className="display-item">
 			{
 				ObjectKeys.map(ObjectKey => {
-					// console.log(assetPosition)
 					const product = assets[ObjectKey][assetName[Math.floor(Math.random() * 6)]];
 					const productImg = product.image;
 					const productDisc = product.productDisc;
 					const productPrice = product.productPrice;
 					return (
-						<>
-							<div className="display-item-box"
-								key={uuid4()}
+						<div key={uuid4()}>
+							<div className="display-item-box"								
 								onClick={() => handleClickItem(ObjectKey)}
 							>
 								<div className="product-item-image">
@@ -44,7 +42,7 @@ const Items = ({ ObjectKeys, assetName, handleClickItem}) => {
 								</div>
 
 							</div>
-						</>
+						</div>
 					)
 				})
 			}

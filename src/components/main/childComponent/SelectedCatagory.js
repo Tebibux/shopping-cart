@@ -4,8 +4,6 @@ import uuid4 from "uuid4";
 
 
 const SelectedCatagory = ({
-	assetName,
-	handleClickItem,
 	selectedCatagories }) => {
 
 
@@ -15,12 +13,11 @@ const SelectedCatagory = ({
 		<div className="display-item">
 			{
 				itemsSelected.map((item) => {
-					console.log(item[1])
 					const itemImg = item[1].image;
 					const itemDesc = item[1].productDisc;
 					const itemPrice = item[1].productPrice;
 					return (
-						<>
+						<div key={uuid4()}>
 							<div className="display-item-box"
 								key={uuid4()}
 								
@@ -43,13 +40,12 @@ const SelectedCatagory = ({
 								</div>
 
 							</div>
-						</>
+						</div>
 					)
 				})
 			}
 
 		</div>
-		// <h1>hey there it is working in progress</h1>
 
 	)
 };
