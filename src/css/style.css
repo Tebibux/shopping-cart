@@ -160,7 +160,15 @@ li,
 	overflow: hidden;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 }
-
+.product-title{
+	font-weight: bold;
+	font-size: 2em;
+	display: grid;
+	place-items: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+	color: #333;
+	
+}
 .product-item-image {
 	margin: 10px;
 	height: 300px;

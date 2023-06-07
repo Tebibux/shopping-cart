@@ -49,7 +49,20 @@ const Main = () => {
           />
         )}
       </main>
-      <div className="sidebar-right"></div>
+      <div className="sidebar-right">
+          <div className="cart-box">
+            <div className="cart-box-img">
+              image here
+            </div>
+            <div className="cart-box-desc">
+              desc here
+            </div>
+            <div className="cart-box-price">
+              price here
+            </div>
+          </div>
+
+      </div>
     </div>
   )
 }

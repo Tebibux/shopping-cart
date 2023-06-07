@@ -21,6 +21,7 @@ const Items = ({ ObjectKeys, assetName, handleClickItem}) => {
 					const productPrice = product.productPrice;
 					return (
 						<div key={uuid4()}>
+							<div className="product-title">{ObjectKey.toUpperCase()}</div>
 							<div className="display-item-box"								
 								onClick={() => handleClickItem(ObjectKey)}
 							>
