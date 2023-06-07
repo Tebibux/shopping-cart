@@ -20,7 +20,6 @@ const Items = ({ ObjectKeys, assetName, handleClickItem}) => {
 					const productImg = product.image;
 					const productDisc = product.productDisc;
 					const productPrice = product.productPrice;
-
 					return (
 						<>
 							<div className="display-item-box"
