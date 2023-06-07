@@ -14,21 +14,23 @@ const SelectedCatagory = ({
 	return (
 		<div className="display-item">
 			{
-				itemsSelected.map((item, index = 0) => {
-					index += 1;
-					console.log(item[index])
+				itemsSelected.map((item) => {
+					console.log(item[1])
+					const itemImg = item[1].image;
+					const itemDesc = item[1].productDisc;
+					const itemPrice = item[1].productPrice;
 					return (
 						<>
-							{/* <div className="display-item-box"
+							<div className="display-item-box"
 								key={uuid4()}
 								
 							>
 								<div className="product-item-image">
-									<img src={itemImg} alt={itemDisc} />
+									<img src={itemImg} alt={itemDesc} />
 								</div>
 								<div className="product-item-disc">
 									<p className="product-item-description">
-										{itemDisc}
+										{itemDesc}
 									</p>
 									<p className="product-item-price">
 										<span className="dollar">$</span>
@@ -40,8 +42,7 @@ const SelectedCatagory = ({
 									</p>
 								</div>
 
-							</div> */}
-							<h1>hey about this</h1>
+							</div>
 						</>
 					)
 				})
