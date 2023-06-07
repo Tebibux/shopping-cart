@@ -13,7 +13,7 @@ const Catagories = ({ handleCatagoryItem }) => {
 				{items.map(item => {
 					return (
 						<li className="item-title" key={uuid4()}
-							onClick={() => handleCatagoryItem()}
+							onClick={() => handleCatagoryItem(item)}
 						>
 							{item.toLocaleUpperCase()}
 						</li>

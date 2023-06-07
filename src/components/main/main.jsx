@@ -19,24 +19,25 @@ export const assetNameHolder = () => {
 
 const Main = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
-  const [catagorySelected, setCatagorySelected] = useState('');
+  
   const ObjectKeys = Object.keys(assets);
   const handleClickItem = (ObjectKey) => {
     setSelectedCatagories(ObjectKey);
   }
-  const handleCatagoryItem = (e) => {
-    setCatagorySelected(e.target.value)
+
+  const handleCatagoryItem = (itemName) => {
+    setSelectedCatagories(itemName)
   }
 
   return (
     <div className="container">
       <div className="sidebar-left">
         <Catagories
-          handleClickItem={handleCatagoryItem}
+          handleCatagoryItem={handleCatagoryItem}
         />
       </div>
       <main className="content">
-        {selectedCatagories === '' && catagorySelected === '' ? (
+        {selectedCatagories === '' ? (
           <Items
             ObjectKeys={ObjectKeys}
             assetName={assetNameHolder()}
