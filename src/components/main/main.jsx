@@ -3,6 +3,7 @@ import Catagories from "./childComponent/Catagories";
 import Items from "./childComponent/Items";
 import SelectedCatagory from "./childComponent/SelectedCatagory";
 import assets from '../../asset/asset';
+import Quantity from "./childComponent/Quantity";
 
 // Function to generate an array with asset names
 export const assetNameHolder = () => {
@@ -19,7 +20,8 @@ export const assetNameHolder = () => {
 
 const Main = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
-  
+  const [selectedToCart, setSelectedToCart] = useState([])
+
   const ObjectKeys = Object.keys(assets);
   const handleClickItem = (ObjectKey) => {
     setSelectedCatagories(ObjectKey);
@@ -28,7 +30,9 @@ const Main = () => {
   const handleCatagoryItem = (itemName) => {
     setSelectedCatagories(itemName)
   }
-
+  const handleAddToCart = (item) => {
+    setSelectedToCart([...selectedToCart, item]);
+  }
   return (
     <div className="container">
       <div className="sidebar-left">
@@ -46,22 +50,12 @@ const Main = () => {
         ) : (
           <SelectedCatagory
             selectedCatagories={selectedCatagories}
+            handleAddToCart={handleAddToCart}
           />
         )}
       </main>
       <div className="sidebar-right">
-          <div className="cart-box">
-            <div className="cart-box-img">
-              image here
-            </div>
-            <div className="cart-box-desc">
-              desc here
-            </div>
-            <div className="cart-box-price">
-              price here
-            </div>
-          </div>
-
+        <Quantity selectedToCart={selectedToCart} />
       </div>
     </div>
   )

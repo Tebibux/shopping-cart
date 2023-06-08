@@ -83,7 +83,7 @@ body {
 .container {
 	display: grid;
 	margin: 0 10%;
-	grid-template-columns: minmax(auto, 300px) minmax(300px, 1fr) minmax(auto, 250px);
+	grid-template-columns: minmax(auto, 200px) minmax(300px, 1fr) minmax(auto, 350px);
 	grid-gap: 20px;
 }
 
@@ -148,7 +148,7 @@ li,
 .display-item {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 20px;
 }
 
 .display-item-box {
@@ -159,9 +159,10 @@ li,
 	gap: 5px;
 	position: relative;
 	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
 }
-.product-title{
+
+.product-title {
 	font-weight: bold;
 	font-size: 2em;
 	display: grid;
@@ -170,6 +171,7 @@ li,
 	color: #333;
 
 }
+
 .product-item-image {
 	margin: 10px;
 	height: 300px;
@@ -193,20 +195,24 @@ li,
 	margin-top: 2rem;
 	margin-right: 15px;
 	display: grid;
-	grid-template-rows: 1.5fr 1f;
+	grid-template-rows: 1.5fr 1f 1fr;
+	gap: 5px;
 	position: relative;
 }
-.product-item-description{
+
+.product-item-description {
 	display: grid;
 	place-items: center;
 	font-weight: bold;
 	font-style: italic;
 	color: rgba(31, 25, 25, 0.909);
 }
-.product-item-price{
+
+.product-item-price {
 	font-weight: bold;
 	font-size: 2em;
 }
+
 .dollar {
 	position: absolute;
 	font-size: 14px;
@@ -226,11 +232,8 @@ li,
 
 }
 
-
-
-
 .sidebar-right {
-	padding: 20px;
+	margin-top: 10px;
 }
 
 .header {
@@ -238,6 +241,39 @@ li,
 	top: 0;
 	left: 0;
 	z-index: 999;
+}
+
+.cart-quantity-box {
+	background-color: #eee9e9;
+	width: 100%;
+	height: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.add-to-cart-btn {
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(40, 40, 248, 0.8);
+	color: white;
+	font-weight: bold;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.cart-quantity-box-img img {
+	padding: 5px;
+	width: 80%;
+	height: 50%;
+	object-fit: contain;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+
 }
 
 .footer {

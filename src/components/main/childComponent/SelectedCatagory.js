@@ -4,7 +4,7 @@ import uuid4 from "uuid4";
 
 
 const SelectedCatagory = ({
-	selectedCatagories }) => {
+	selectedCatagories,handleAddToCart }) => {
 
 
 	const itemsSelected = Object.entries(assetObject[selectedCatagories]);
@@ -18,10 +18,7 @@ const SelectedCatagory = ({
 					const itemPrice = item[1].productPrice;
 					return (
 						<div key={uuid4()}>
-							<div className="display-item-box"
-								key={uuid4()}
-								
-							>
+							<div className="display-item-box">
 								<div className="product-item-image">
 									<img src={itemImg} alt={itemDesc} />
 								</div>
@@ -35,8 +32,8 @@ const SelectedCatagory = ({
 											{itemPrice}
 											<span className="nine-number">.99</span>
 										</span>
-
 									</p>
+									<button className="add-to-cart-btn" onClick={() => handleAddToCart(item[1])}>Add to Cart </button>
 								</div>
 
 							</div>
