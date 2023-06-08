@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Catagories from "./childComponent/Catagories";
 import Items from "./childComponent/Items";
 import SelectedCatagory from "./childComponent/SelectedCatagory";

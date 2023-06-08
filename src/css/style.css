@@ -17,6 +17,7 @@ a {
 body {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
+	background-color: #f9ededab;
 }
 
 .App {
@@ -133,7 +134,7 @@ li,
 	width: inherit;
 	background: linear-gradient(to top,
 			transparent,
-			rgba(163, 157, 157, 0.235));
+			rgba(163, 157, 157, 0.635));
 	color: rgb(0, 3, 80);
 	border-radius: 10px;
 	transition: all 0.5s ease-in-out;
@@ -167,7 +168,7 @@ li,
 	place-items: center;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 	color: #333;
-	
+
 }
 .product-item-image {
 	margin: 10px;
@@ -184,7 +185,7 @@ li,
 	object-fit: contain;
 	border-radius: 10px;
 	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 
 }
 
