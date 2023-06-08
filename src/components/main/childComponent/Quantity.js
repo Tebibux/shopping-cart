@@ -6,7 +6,11 @@ const Quantity = ({ selectedToCart }) => {
 	const handleInput = (e) => {
 		setInputValue(e.target.value);
 	};
-
+	const validatePositiveNumber = (e) => {
+		if (e.value < 0) {
+			e.value = '';
+		  }
+	}
 	if (selectedToCart.length !== 0) {
 		return (
 			<div className="cart-quantity-box">
@@ -24,10 +28,10 @@ const Quantity = ({ selectedToCart }) => {
 						<span className="dollar">$</span>
 						<span className="number">
 							{selectedToCart[selectedToCart.length - 1].productPrice}
-							<span className="nine-number">.99  X  </span>
+							<span className="nine-number">.99  </span>
 							{inputValue !== 0 ? (
 								<span>
-									{inputValue} = {inputValue * (selectedToCart[selectedToCart.length - 1].productPrice + .99)}
+									  X  {inputValue} = {(inputValue * (selectedToCart[selectedToCart.length - 1].productPrice + .99)).toFixed(2)}
 								</span>
 							) : null}
 						</span>
@@ -36,11 +40,10 @@ const Quantity = ({ selectedToCart }) => {
 				<div className="quantity-selection-box">
 					<input
 						type="number"
-						name=""
-						id=""
 						placeholder="input the number"
 						className="quantity-selection-box-input"
 						onChange={handleInput}
+						min="1" oninput={validatePositiveNumber} 
 					/>
 					<button className="decide-to-add-to-cart">
 						Confirm
