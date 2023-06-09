@@ -12,7 +12,6 @@ const Quantity = ({ selectedToCart, cartArray, handleAddToCartArray }) => {
 			e.target.value = '';
 		}
 	}
-
 	useEffect(() => {
 	}, [cartArray]);
 
