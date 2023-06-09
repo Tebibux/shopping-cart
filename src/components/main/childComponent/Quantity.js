@@ -43,7 +43,7 @@ const Quantity = ({ selectedToCart }) => {
 						placeholder="input the number"
 						className="quantity-selection-box-input"
 						onChange={handleInput}
-						min="1" oninput={validatePositiveNumber} 
+						min="1" onInput={validatePositiveNumber} 
 					/>
 					<button className="decide-to-add-to-cart">
 						Confirm
