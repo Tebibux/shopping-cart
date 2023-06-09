@@ -314,6 +314,16 @@ li,
 	color: #333;
 }
 
+.item-selected-message-box{
+	display: none;
+	place-items: center;
+	font-size: bolder;
+	color: #2020208c;
+	padding: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+
+}
+
 .footer {
 	background: linear-gradient(to bottom, transparent, rgba(207, 232, 240, 0.925));
 	padding: 20px;

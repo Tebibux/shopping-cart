@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const Quantity = ({ selectedToCart }) => {
+const Quantity = ({ selectedToCart, cartArray, handleAddToCartArray }) => {
 	const [inputValue, setInputValue] = useState(0);
-	const [cartArray, setCartArray] = useState([]);
+
 
 	const handleInput = (e) => {
 		setInputValue(e.target.value);
@@ -12,14 +12,7 @@ const Quantity = ({ selectedToCart }) => {
 			e.target.value = '';
 		}
 	}
-	const handleAddToCartArray = (selectedToCart, inputValue) => {
-		const newCartItem = {
-			selectedToCart: selectedToCart[selectedToCart.length - 1],
-			inputValue: inputValue < 1 ? 1 : inputValue
-		};
-		setCartArray([...cartArray, newCartItem])
-		console.log(cartArray);
-	}
+
 	useEffect(() => {
 	}, [cartArray]);
 

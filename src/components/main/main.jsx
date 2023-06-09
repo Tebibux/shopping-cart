@@ -4,7 +4,7 @@ import Items from "./childComponent/Items";
 import SelectedCatagory from "./childComponent/SelectedCatagory";
 import assets from '../../asset/asset';
 import Quantity from "./childComponent/Quantity";
-
+import ItemSelected from './childComponent/itemSelectedMessage';
 // Function to generate an array with asset names
 export const assetNameHolder = () => {
   const assetArray = [];
@@ -21,6 +21,8 @@ export const assetNameHolder = () => {
 const Main = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
   const [selectedToCart, setSelectedToCart] = useState([])
+  const [cartArray, setCartArray] = useState([]);
+
 
   const ObjectKeys = Object.keys(assets);
   const handleClickItem = (ObjectKey) => {
@@ -32,6 +34,20 @@ const Main = () => {
   }
   const handleAddToCart = (item) => {
     setSelectedToCart([...selectedToCart, item]);
+  }
+  // handles the array update
+  const handleAddToCartArray = (selectedToCart, inputValue) => {
+    const newCartItem = {
+      selectedToCart: selectedToCart[selectedToCart.length - 1],
+      inputValue: inputValue < 1 ? 1 : inputValue
+    };
+    setCartArray([...cartArray, newCartItem]);
+    const cartQuantityBox = document.querySelector('.cart-quantity-box');
+    const itemSelectedMessageBox = document.querySelector('.item-selected-message-box');
+    cartQuantityBox.style.display = "none"
+    itemSelectedMessageBox.style.display = "grid";
+
+
   }
   return (
     <div className="container">
@@ -55,7 +71,13 @@ const Main = () => {
         )}
       </main>
       <div className="sidebar-right">
-        <Quantity selectedToCart={selectedToCart} />
+        <Quantity
+          selectedToCart={selectedToCart}
+          handleAddToCartArray={handleAddToCartArray}
+          cartArray={cartArray}
+          setCartArray={setCartArray}
+        />
+        <ItemSelected />
       </div>
     </div>
   )
