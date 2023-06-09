@@ -264,7 +264,6 @@ li,
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
 	border-radius: 5px;
 	padding: 10px;
-	display: flex;
 	flex-direction: column;
 	gap: 10px;
 	right: 0;
