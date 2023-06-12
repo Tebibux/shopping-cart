@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Catagories from "./childComponent/Catagories";
 import Items from "./childComponent/Items";
 import SelectedCatagory from "./childComponent/SelectedCatagory";
@@ -27,6 +27,8 @@ const Main = ({
   handleAddToCartArray,
   cartArray,
   setCartArray,
+  selectedCartElement,
+  setSelectedCartElement
 }) => {
 
   return (
@@ -56,8 +58,12 @@ const Main = ({
           handleAddToCartArray={handleAddToCartArray}
           cartArray={cartArray}
           setCartArray={setCartArray}
+          selectedCartElement={selectedCartElement}
+          setSelectedCartElement={setSelectedCartElement}
         />
-        <ItemSelected 
+        <ItemSelected
+          selectedCartElement={selectedCartElement}
+          setSelectedCartElement={setSelectedCartElement}
         />
       </div>
     </div>

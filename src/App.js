@@ -67,6 +67,8 @@ const App = () => {
         handleAddToCartArray={handleAddToCartArray}
         cartArray={cartArray}
         setCartArray={setCartArray}
+        selectedCartElement={selectedCartElement}
+        setSelectedCartElement={setSelectedCartElement}
       />
       <Footer />
     </div>
