@@ -8,7 +8,7 @@ const App = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
   const [selectedToCart, setSelectedToCart] = useState([])
   const [cartArray, setCartArray] = useState([]);
-  const [selectElement, setSelectElement] = useState(false);
+  const [selectedCartElement, setSelectedCartElement] = useState([]);
 
   const ObjectKeys = Object.keys(assets);
 
@@ -16,14 +16,14 @@ const App = () => {
   const handleClickItem = (ObjectKey) => {
     setSelectedCatagories(ObjectKey);
     const cartQuantityBox = document.querySelector('.cart-quantity-box');
-    if(!cartQuantityBox) return;
+    if (!cartQuantityBox) return;
     console.log("🚀 ~ file: main.jsx:32 ~ handleClickItem ~ cartQuantityBox:", cartQuantityBox)
     cartQuantityBox.style.display = "flex";
   }
   const handleCatagoryItem = (itemName) => {
     setSelectedCatagories(itemName);
     const cartQuantityBox = document.querySelector('.cart-quantity-box');
-    if(!cartQuantityBox) return;
+    if (!cartQuantityBox) return;
     console.log("🚀 ~ file: main.jsx:32 ~ handleClickItem ~ cartQuantityBox:", cartQuantityBox)
     cartQuantityBox.style.display = "flex";
   }
@@ -51,7 +51,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        selectedCartElement={selectedCartElement}
+        setSelectedCartElement={setSelectedCartElement}
+      />
       <Main
         selectedCatagories={selectedCatagories}
         setSelectedCatagories={setSelectedCatagories}
@@ -64,8 +67,6 @@ const App = () => {
         handleAddToCartArray={handleAddToCartArray}
         cartArray={cartArray}
         setCartArray={setCartArray}
-        setSelectElement={setSelectElement}
-        selectElement={selectElement}
       />
       <Footer />
     </div>

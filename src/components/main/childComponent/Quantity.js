@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const Quantity = ({
 	selectedToCart,
 	cartArray,
-	selectElement,
 	handleAddToCartArray }) => {
 	const [inputValue, setInputValue] = useState(0);
 
@@ -20,7 +19,7 @@ const Quantity = ({
 	}, [cartArray]);
 
 
-	if (selectedToCart.length !== 0 && selectElement === false) {
+	if (selectedToCart.length !== 0) {
 		return (
 			<div className="cart-quantity-box">
 				<div className="cart-quantity-box-img">
