@@ -24,7 +24,7 @@ const Main = ({
   handleClickItem,
   handleCatagoryItem,
   handleAddToCart,
-  handleAddToCartArray,
+  handleConfirm,
   cartArray,
   setCartArray }) => {
 
@@ -52,7 +52,7 @@ const Main = ({
       <div className="sidebar-right">
         <Quantity
           selectedToCart={selectedToCart}
-          handleAddToCartArray={handleAddToCartArray}
+          handleConfirm={handleConfirm}
           cartArray={cartArray}
           setCartArray={setCartArray}
         />

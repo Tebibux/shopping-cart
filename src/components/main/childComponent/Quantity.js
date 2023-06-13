@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 const Quantity = ({
 	selectedToCart,
 	cartArray,
-	handleAddToCartArray }) => {
+	handleConfirm }) => {
 
 	const [inputValue, setInputValue] = useState(0);
 
 	const handleInput = (e) => {
+		e.preventDefault();
 		setInputValue(e.target.value);
 	};
 	const validatePositiveNumber = (e) => {
@@ -17,7 +18,6 @@ const Quantity = ({
 	}
 	useEffect(() => {
 	}, [cartArray]);
-
 
 	if (selectedToCart.length !== 0) {
 		return (
@@ -54,7 +54,7 @@ const Quantity = ({
 						min="1" onInput={validatePositiveNumber}
 					/>
 					<button className="decide-to-add-to-cart"
-						onClick={() => handleAddToCartArray(selectedToCart, inputValue)}
+						onClick={() => handleConfirm(selectedToCart, inputValue)}
 					>
 						Confirm
 					</button>
