@@ -3,9 +3,6 @@ import assets from '../../../asset/asset';
 import uuid4 from "uuid4";
 
 
-
-
-
 const Items = ({ ObjectKeys, assetName, handleClickItem}) => {
 	// map through the items 
 	// extract item and in each item randomize from the ten item

@@ -26,10 +26,7 @@ const Main = ({
   handleAddToCart,
   handleAddToCartArray,
   cartArray,
-  setCartArray,
-  selectedCartElement,
-  setSelectedCartElement
-}) => {
+  setCartArray }) => {
 
   return (
     <div className="container">
@@ -58,12 +55,8 @@ const Main = ({
           handleAddToCartArray={handleAddToCartArray}
           cartArray={cartArray}
           setCartArray={setCartArray}
-          selectedCartElement={selectedCartElement}
-          setSelectedCartElement={setSelectedCartElement}
         />
         <ItemSelected
-          selectedCartElement={selectedCartElement}
-          setSelectedCartElement={setSelectedCartElement}
         />
       </div>
     </div>

@@ -8,7 +8,6 @@ const App = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
   const [selectedToCart, setSelectedToCart] = useState([])
   const [cartArray, setCartArray] = useState([]);
-  const [selectedCartElement, setSelectedCartElement] = useState([]);
 
   const ObjectKeys = Object.keys(assets);
 
@@ -52,8 +51,6 @@ const App = () => {
   return (
     <div className="App">
       <Header
-        selectedCartElement={selectedCartElement}
-        setSelectedCartElement={setSelectedCartElement}
       />
       <Main
         selectedCatagories={selectedCatagories}
@@ -67,8 +64,6 @@ const App = () => {
         handleAddToCartArray={handleAddToCartArray}
         cartArray={cartArray}
         setCartArray={setCartArray}
-        selectedCartElement={selectedCartElement}
-        setSelectedCartElement={setSelectedCartElement}
       />
       <Footer />
     </div>

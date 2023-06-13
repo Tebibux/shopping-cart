@@ -4,8 +4,8 @@ const Quantity = ({
 	selectedToCart,
 	cartArray,
 	handleAddToCartArray }) => {
-	const [inputValue, setInputValue] = useState(0);
 
+	const [inputValue, setInputValue] = useState(0);
 
 	const handleInput = (e) => {
 		setInputValue(e.target.value);
