@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/style.css';
 import assets from './asset/asset';
 import Header from './components/header/header';
@@ -30,6 +30,7 @@ const App = () => {
   // and display in the items component
   const handleAddToCart = (item) => {
     setSelectedToCart([...selectedToCart, item]);
+    setShowMessage(false);
   }
 
   // takes value and display a message
@@ -42,17 +43,30 @@ const App = () => {
 
   // handle the Item that added to the cart array
   // and to be displayed in the array
-  const handleConfirm = (itemToBeAdded, numberOfQuantity=quantity) => {
-    if(!cartArray.includes(itemToBeAdded)) setCartArray([...cartArray, itemToBeAdded])
-    else{
+  const handleConfirm = (itemToBeAdded, numberOfQuantity = quantity) => {
+    if (!cartArray.includes(itemToBeAdded)) {
+      setCartArray([...cartArray, itemToBeAdded]);
+      setQuantity(numberOfQuantity);
+      console.log(cartArray)
+    }
+    else {
       setShowMessage(true);
     }
-    console.log(showMessage);
+
   }
+
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowMessage(true);
+  //   }, 4000);
+  //   console.log('me at show message');
+  // }, [cartArray, showMessage]);
 
   return (
     <div className="App">
-      <Header cartArray={cartArray}
+      <Header
+        cartArray={cartArray}
       />
       <Main
         selectedCatagories={selectedCatagories}
@@ -66,7 +80,7 @@ const App = () => {
         handleConfirm={handleConfirm}
         cartArray={cartArray}
         setCartArray={setCartArray}
-        
+        showMessage={showMessage}
       />
       <Footer />
     </div>

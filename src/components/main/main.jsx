@@ -4,7 +4,7 @@ import Items from "./childComponent/Items";
 import SelectedCatagory from "./childComponent/SelectedCatagory";
 
 import Quantity from "./childComponent/Quantity";
-import ItemSelected from './childComponent/itemSelectedMessage';
+import ItemSelectedMessage from './childComponent/itemSelectedMessage';
 // Function to generate an array with asset names
 export const assetNameHolder = () => {
   const assetArray = [];
@@ -26,7 +26,9 @@ const Main = ({
   handleAddToCart,
   handleConfirm,
   cartArray,
-  setCartArray }) => {
+  setCartArray,
+  showMessage
+}) => {
 
   return (
     <div className="container">
@@ -50,13 +52,19 @@ const Main = ({
         )}
       </main>
       <div className="sidebar-right">
+        {
+          showMessage ? (
+            <ItemSelectedMessage />
+          ) : (
+            <Quantity
+              selectedToCart={selectedToCart}
+              handleConfirm={handleConfirm}
+              cartArray={cartArray}
+              setCartArray={setCartArray}
+            />
+          )
+        }
 
-        <Quantity
-          selectedToCart={selectedToCart}
-          handleConfirm={handleConfirm}
-          cartArray={cartArray}
-          setCartArray={setCartArray}
-        />
       </div>
 
     </div>

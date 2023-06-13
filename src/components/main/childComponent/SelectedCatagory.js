@@ -4,7 +4,9 @@ import uuid4 from "uuid4";
 
 
 const SelectedCatagory = ({
-	selectedCatagories,handleAddToCart }) => {
+	selectedCatagories,
+	handleAddToCart
+}) => {
 
 
 	const itemsSelected = Object.entries(assetObject[selectedCatagories]);
