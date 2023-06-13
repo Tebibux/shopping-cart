@@ -8,9 +8,10 @@ const App = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
   const [selectedToCart, setSelectedToCart] = useState([])
   const [cartArray, setCartArray] = useState([]);
-  const [userInput, setUserInput] = useState(1);
+  const [quantity, setQuantity] = useState(1);
+  const [showMessage, setShowMessage] = useState(false);
 
-
+  // use to display the message box
   const ObjectKeys = Object.keys(assets);
 
 
@@ -18,34 +19,40 @@ const App = () => {
     setSelectedCatagories(ObjectKey);
     const cartQuantityBox = document.querySelector('.cart-quantity-box');
     if (!cartQuantityBox) return;
-    console.log("🚀 ~ file: main.jsx:32 ~ handleClickItem ~ cartQuantityBox:", cartQuantityBox)
-    cartQuantityBox.style.display = "flex";
+
   }
   const handleCatagoryItem = (itemName) => {
     setSelectedCatagories(itemName);
-    const cartQuantityBox = document.querySelector('.cart-quantity-box');
-    if (!cartQuantityBox) return;
-    console.log("🚀 ~ file: main.jsx:32 ~ handleClickItem ~ cartQuantityBox:", cartQuantityBox)
-    // cartQuantityBox.style.display = "flex";
   }
+
+  // select the item and displayed on the quantity element
+  // map through the selected to cart array 
+  // and display in the items component
   const handleAddToCart = (item) => {
     setSelectedToCart([...selectedToCart, item]);
   }
-  // handles the array update
-  const handleConfirm = (confirmToArray, inputValue) => {
-    if (inputValue === 0) return
-    // make the quantity box invisible
-    // display the item selected box
-    // setCartArray([...cartArray, newCartItem]);
-    setUserInput(inputValue);
-    // setSelectedToCart([...cartArray, selectedToCart]);
 
+  // takes value and display a message
+  // declare a new html and display the message that
+  // item selected or item input box Should not be empty
 
+  // const messageToDisplay = () => {
+
+  // }
+
+  // handle the Item that added to the cart array
+  // and to be displayed in the array
+  const handleConfirm = (itemToBeAdded, numberOfQuantity=quantity) => {
+    if(!cartArray.includes(itemToBeAdded)) setCartArray([...cartArray, itemToBeAdded])
+    else{
+      setShowMessage(true);
+    }
+    console.log(showMessage);
   }
 
   return (
     <div className="App">
-      <Header
+      <Header cartArray={cartArray}
       />
       <Main
         selectedCatagories={selectedCatagories}
@@ -59,6 +66,7 @@ const App = () => {
         handleConfirm={handleConfirm}
         cartArray={cartArray}
         setCartArray={setCartArray}
+        
       />
       <Footer />
     </div>

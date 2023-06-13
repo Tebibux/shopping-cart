@@ -1,9 +1,9 @@
 import React from 'react'
 import HeaderNavigation from './navLink';
-const Header = () => {
+const Header = ({ cartArray }) => {
 	return (
 		<div className="header">
-			<HeaderNavigation />
+			<HeaderNavigation cartArray={cartArray} />
 		</div>
 	)
 }

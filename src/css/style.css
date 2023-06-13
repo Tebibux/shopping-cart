@@ -218,7 +218,14 @@ li,
 	font-size: 14px;
 	margin: 0px;
 }
-
+.number-cart-added{
+	position: absolute;
+	font-size: 17px;
+	background-color: rgba(226, 226, 61, 0.84);
+	color: #202020bc;
+	padding: 0 5px;
+	border-radius: 50%;
+}
 .number {
 	position: absolute;
 	font-size: 18px;

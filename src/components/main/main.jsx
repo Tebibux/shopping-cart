@@ -50,15 +50,15 @@ const Main = ({
         )}
       </main>
       <div className="sidebar-right">
+
         <Quantity
           selectedToCart={selectedToCart}
           handleConfirm={handleConfirm}
           cartArray={cartArray}
           setCartArray={setCartArray}
         />
-        <ItemSelected
-        />
       </div>
+
     </div>
   )
 }
