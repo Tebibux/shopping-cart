@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './css/style.css';
 import assets from './asset/asset';
 import Header from './components/header/header';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
+
+
 const App = () => {
   const [selectedCatagories, setSelectedCatagories] = useState('');
   const [selectedToCart, setSelectedToCart] = useState([])
@@ -64,7 +66,7 @@ const App = () => {
   // }, [cartArray, showMessage]);
 
   return (
-    <div className="App">
+    <>
       <Header
         cartArray={cartArray}
       />
@@ -83,7 +85,7 @@ const App = () => {
         showMessage={showMessage}
       />
       <Footer />
-    </div>
+    </>
   );
 };
 
